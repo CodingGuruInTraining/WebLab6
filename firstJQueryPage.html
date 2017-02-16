@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <p>Click me</p>
+    <p>Click me too</p>
+    <p class="mouse">Click me</p>
+    <p class="mouse">Click me too</p>
+    <p class="mouse">Click me</p>
+    <p class="mouse">Click me too</p>
+    <p class="mouse">Click me</p>
+    <p class="mouse">Click me too</p>
+    <p class="mouse">Click me</p>
+    <p class="mouse">Click me too</p>
+
+    <script>
+        $(function(){
+            $("p").click(function() {
+                $(this).css({
+                    "color" : "blue",
+                    "background-color" : "pink"
+                });
+            });
+
+            $(".mouse").hover(function() {
+                $(this).fadeout();
+//                css({
+//                    "background" : "purple"
+//                })
+            })
+        });
+
+
+    </script>
+</body>
+</html>
