@@ -23,10 +23,22 @@
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
-            var newLi = ("<li class='not_done'>" + $('#inputbox').val() + "</li>");
-            newLi.click('click', function(){
-                $(this).toggleClass("bold");
-            });
+            var newLi = $("<li></li>").click(function(){console.log("hey")})
+//                $(this).toggleClass("bold")});
+
+//            var newLi = document.createElement("li");
+//            newLi.innerHTML = $('#inputbox').val();
+//            $(newLi).click(function(){
+//                $(this).toggleClass("bold");
+//            });
+
+
+//            var newLi = ("<li class='not_done'>" + $('#inputbox').val() + "</li>");
+//            newLi.click('click', function(){
+//                $(this).toggleClass("bold");
+//            });
+
+
             $("myList").append(newLi);
 //            $("#myList").append("<li class='not_done'>" + $('#inputbox').val() + "</li>");
 //            $("li.not_done").click(function(){
