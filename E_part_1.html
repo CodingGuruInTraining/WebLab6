@@ -52,24 +52,31 @@
     $(function() {
         $("span").css({"font-weight":"bold"});
 
-//        $("span").click(function() {
-////            $(this).addClass("makebold");
-//            $(this).css({
-//                "font-weight": bolder
-//            });
-//        })
+        $("h2").click(function(){
+            $(this).css({"background-color": "green"})
+        })
+
+        $("p").hover(function(){
+            $(this).hide();
+        });
+        $("p").mouseout(function(){
+            $(this).fadeIn(500);
+        })
+
+        $("#h1_blue").click(function(){
+            $("h1").css({"color":"blue"})
+        })
+
+        $("#remove_not_important").click(function(){
+            $(".not_important").remove()
+        })
+
+        $("ul").click(function(){
+            $(this).slideUp();
+        })
     });
-
-
-
-
 </script>
 
- <!--<style>-->
-     <!--.makebold {-->
-         <!--font-weight: bold;-->
-     <!--}-->
- <!--</style>-->
 
 
 
