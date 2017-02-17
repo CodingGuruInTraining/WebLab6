@@ -6,24 +6,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-
+<style>
+    .bold {
+        font-weight: bold;
+    }
+</style>
 
 <script>
     $(function() {
 
-        $("body").append("<input type='text' id='inputbox'>")
+        $("body").append("<input type='text' id='inputbox'>" + "<br><br>")
         $("body").append("<button id='myButton'>Press Me</button>")
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
-            var val = $('#inputbox').val();
-//                .getAttribute();
-            alert(val);
             $("#myList").append("<li>" + $('#inputbox').val() + "</li>");
-//                .appendChild(val);
-//                .getAttribute($("#inputbox").innerHTML);
-//                .appendData({$("#inputbox").innerHTML});
-        })
+            $("li").click(function(){
+                $(this).toggleClass("bold");
+            });
+        });
 
 
 
