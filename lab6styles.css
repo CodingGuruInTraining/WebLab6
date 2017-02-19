@@ -1,3 +1,14 @@
-.makebold {
+.not_done {
     font-weight: bold;
+}
+
+.complete {
+    color: green;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+li {
+    font-size: 20px;
+    font-family: "Comic Sans MS";
 }
