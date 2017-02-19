@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="lab6styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -23,7 +24,8 @@
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
-            $("#myList").append("<li class='not_done'></li>");
+            var mytext = "<li class='not_done'>ddd</li>";
+            $("#myList").append(mytext);
 
 
 
