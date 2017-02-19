@@ -10,9 +10,9 @@
     .bold {
         font-weight: bold;
     }
-    li {
-        color: red;
-    }
+    /*li {*/
+        /*color: red;*/
+    /*}*/
 </style>
 
 <script>
@@ -23,8 +23,17 @@
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
-            var newLi = $("<li></li>").click(function(){console.log("hey")});
-//                $(this).toggleClass("bold")});
+            $("#myList").append("<li class='not_done'></li>");
+
+
+
+
+//            var newLi = $("<li>hi</li>"); //.click(function(){console.log("hey")});
+////                $(this).toggleClass("bold")});
+//            newLi.innerHTML = "hello";
+//            console.log(newLi);
+
+
 
 //            var newLi = document.createElement("li");
 //            newLi.innerHTML = $('#inputbox').val();
@@ -39,7 +48,9 @@
 //            });
 
 
-            $("myList").append(newLi);
+//            $("myList").append(newLi);
+
+
 //            $("#myList").append("<li class='not_done'>" + $('#inputbox').val() + "</li>");
 //            $("li.not_done").click(function(){
 //                console.log("click")
