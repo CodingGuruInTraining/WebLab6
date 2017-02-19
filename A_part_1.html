@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mark's To-Do List</title>
     <link rel="stylesheet" type="text/css" href="lab6styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -26,6 +26,13 @@
         $("#myButton").click(function(){
             var mytext = "<li class='not_done'>ddd</li>";
             $("#myList").append(mytext);
+
+
+
+
+            //            mytext.click(function(){
+//                mytext.toggleClass("complete")
+//            });
 
 
 
@@ -65,6 +72,31 @@
 //            })
         });
 
+
+//        $(".not_done").click(function(){
+//            var whatEvent = $._data(this, 'events');
+//            if (whatEvent && whatEvent.click) console.log("why u repeating?!");
+//        });
+
+
+        window.onclick(function(){
+
+                var whatEvent = $._data(this, 'events');
+                if (whatEvent && whatEvent.click) console.log("why u repeating?!");
+            });
+//        })
+//        $(".not_done").click(function(){
+//            var whatEvent = $._data(this, 'events');
+//            if (whatEvent && whatEvent.click) console.log("why u repeating?!");
+//        });
+
+
+        $("#myButton").click(function(){
+            $(".not_done").css({
+                "font-weight" : "bold",
+                "color" : "red"
+            })
+        })
 
 
 
