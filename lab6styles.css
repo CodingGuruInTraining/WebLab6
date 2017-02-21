@@ -15,4 +15,6 @@ li {
 
 button {
     margin: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
 }
