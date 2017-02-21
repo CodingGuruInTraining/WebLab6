@@ -7,14 +7,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-<style>
-    /*.bold {*/
-        /*font-weight: bold;*/
-    /*}*/
-    /*li {*/
-        /*color: red;*/
-    /*}*/
-</style>
 
 <script>
     $(function() {
@@ -28,58 +20,6 @@
             console.log("textbox reads: " + input);
             $("#myList").append("<li class='not_done'>" + input + "</li>");
 
-
-
-            //            var mytext = "<li class='not_done'>ddd</li>";
-//            $("#myList").append(mytext);
-//            var whatEvent = $._data(mytext, 'events');
-//            if (whatEvent && whatEvent.click) {
-//                console.log("the event: " + whatEvent.innerHTML);
-////                console.log("why u repeating?!");
-//            }
-
-
-
-            //            mytext.click(function(){
-//                mytext.toggleClass("complete")
-//            });
-
-
-
-
-//            var newLi = $("<li>hi</li>"); //.click(function(){console.log("hey")});
-////                $(this).toggleClass("bold")});
-//            newLi.innerHTML = "hello";
-//            console.log(newLi);
-
-
-
-//            var newLi = document.createElement("li");
-//            newLi.innerHTML = $('#inputbox').val();
-//            $(newLi).click(function(){
-//                $(this).toggleClass("bold");
-//            });
-
-
-//            var newLi = ("<li class='not_done'>" + $('#inputbox').val() + "</li>");
-//            newLi.click('click', function(){
-//                $(this).toggleClass("bold");
-//            });
-
-
-//            $("myList").append(newLi);
-
-
-//            $("#myList").append("<li class='not_done'>" + $('#inputbox').val() + "</li>");
-//            $("li.not_done").click(function(){
-//                console.log("click")
-//                $(this).toggleClass("bold");
-////                $(this).addClass("so_done");
-//            });
-//            $("li.so_done").click(function(){
-//                $(this).toggleClass("allDone");
-////                $(this).addClass("not_done");
-//            })
         });
 
         $("#myList").click(function(event){
@@ -87,46 +27,11 @@
             console.log("target text: " + whatEvent.innerHTML);
             $(whatEvent).toggleClass("complete");
         });
-
-
-
-
-
-//        $(".not_done").click(function(){
-//            var whatEvent = $._data(this, 'events');
-//            if (whatEvent && whatEvent.click) console.log("why u repeating?!");
-//        });
-
-
-
-//        window.onclick(function(){
-//
-//                var whatEvent = $._data(this, 'events');
-//                if (whatEvent && whatEvent.click) console.log("why u repeating?!");
-//            });
-
-
-
-//        })
-//        $(".not_done").click(function(){
-//            var whatEvent = $._data(this, 'events');
-//            if (whatEvent && whatEvent.click) console.log("why u repeating?!");
-//        });
-
-
-
-
-//        $("#myButton").click(function(){
-//            $(".not_done").css({
-//                "font-weight" : "bold",
-//                "color" : "red"
-//            })
-//        })
-
-
-
     })
 </script>
 
 </body>
 </html>
+
+<!--helpers:-->
+<!--http://stackoverflow.com/questions/5116929/get-clicked-li-from-ul-onclick-->
