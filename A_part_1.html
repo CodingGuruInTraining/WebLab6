@@ -31,8 +31,17 @@
             var whatEvent = event.target;
             console.log("target text: " + whatEvent.innerHTML);
             $(whatEvent).toggleClass("complete");
+
+            $(whatEvent).data = ("date", Date.now());
+
+            if (!$(whatEvent).data("date")) {
+                console.log("no data here");
+            }
+            else { console.log("data is:" + $(whatEvent).data)}
+
             $(whatEvent).customInfo = Date.now();
-            console.log("custom info:" + $(whatEvent).customInfo.val());
+            console.log(Date.now());
+//            console.log("custom info:" + $(whatEvent).customInfo.val());
         });
 
 
