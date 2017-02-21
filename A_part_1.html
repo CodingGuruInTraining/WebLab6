@@ -24,9 +24,19 @@
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
-            var mytext = "<li class='not_done'>ddd</li>";
-            $("#myList").append(mytext);
+            var input = $("#inputbox").val();
+            console.log("textbox reads: " + input);
 
+
+
+
+            //            var mytext = "<li class='not_done'>ddd</li>";
+//            $("#myList").append(mytext);
+//            var whatEvent = $._data(mytext, 'events');
+//            if (whatEvent && whatEvent.click) {
+//                console.log("the event: " + whatEvent.innerHTML);
+////                console.log("why u repeating?!");
+//            }
 
 
 
@@ -79,11 +89,15 @@
 //        });
 
 
-        window.onclick(function(){
 
-                var whatEvent = $._data(this, 'events');
-                if (whatEvent && whatEvent.click) console.log("why u repeating?!");
-            });
+//        window.onclick(function(){
+//
+//                var whatEvent = $._data(this, 'events');
+//                if (whatEvent && whatEvent.click) console.log("why u repeating?!");
+//            });
+
+
+
 //        })
 //        $(".not_done").click(function(){
 //            var whatEvent = $._data(this, 'events');
@@ -91,12 +105,14 @@
 //        });
 
 
-        $("#myButton").click(function(){
-            $(".not_done").css({
-                "font-weight" : "bold",
-                "color" : "red"
-            })
-        })
+
+
+//        $("#myButton").click(function(){
+//            $(".not_done").css({
+//                "font-weight" : "bold",
+//                "color" : "red"
+//            })
+//        })
 
 
 
