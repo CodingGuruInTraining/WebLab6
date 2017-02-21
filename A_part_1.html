@@ -15,6 +15,7 @@
         $("body").append("<button id='myButton'>Press Me</button>");
         $("body").append("<button id='clearButton'>Clear</button>");
         $("body").append("<ul id='myList'></ul>");
+        $("body").append("<table id='myTable'><tr><th scope='col'>Item</th><th scope='col'>Date</th></tr></table>");
 
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
@@ -30,9 +31,11 @@
             var whatEvent = event.target;
             console.log("target text: " + whatEvent.innerHTML);
             $(whatEvent).toggleClass("complete");
+            $(whatEvent).customInfo = Date.now();
+            console.log("custom info:" + $(whatEvent).customInfo.val());
         });
 
-        $("body").append("<table id='myTable'><tr><th scope='col'>Item</th><th scope='col'>Date</th></tr></table>");
+
 
 //        <tr><td></td></tr>
 
