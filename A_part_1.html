@@ -13,13 +13,17 @@
 
         $("body").append("<input type='text' id='inputbox'>" + "<br><br>");
         $("body").append("<button id='myButton'>Press Me</button>");
+        $("body").append("<button id='clearButton'>Clear</button>");
         $("body").append("<ul id='myList'></ul>");
 
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
             console.log("textbox reads: " + input);
             $("#myList").append("<li class='not_done'>" + input + "</li>");
+        });
 
+        $("#clearButton").click(function(){
+            $(".complete").remove();
         });
 
         $("#myList").click(function(event){

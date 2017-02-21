@@ -12,3 +12,7 @@ li {
     font-size: 20px;
     font-family: "Comic Sans MS";
 }
+
+button {
+    margin: 0 15px;
+}
