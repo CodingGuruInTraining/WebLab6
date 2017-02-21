@@ -1,6 +1,6 @@
-/*.not_done {*/
-    /*font-weight: bold;*/
-/*}*/
+.not_done {
+    font-weight: bold;
+}
 
 .complete {
     color: green;

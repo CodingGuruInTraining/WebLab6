@@ -8,9 +8,9 @@
 </head>
 <body>
 <style>
-    .bold {
-        font-weight: bold;
-    }
+    /*.bold {*/
+        /*font-weight: bold;*/
+    /*}*/
     /*li {*/
         /*color: red;*/
     /*}*/
@@ -26,7 +26,7 @@
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
             console.log("textbox reads: " + input);
-
+            $("#myList").append("<li class='not_done'>" + input + "</li>");
 
 
 
@@ -81,6 +81,15 @@
 ////                $(this).addClass("not_done");
 //            })
         });
+
+        $("#myList").click(function(event){
+            var whatEvent = event.target;
+            console.log("target text: " + whatEvent.innerHTML);
+            $(whatEvent).toggleClass("complete");
+        });
+
+
+
 
 
 //        $(".not_done").click(function(){
