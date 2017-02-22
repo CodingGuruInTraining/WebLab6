@@ -35,7 +35,7 @@
             var timestamp = Date.now();
             console.log("timestamp:" + timestamp.toString());
 
-            $(whatEvent).data = ("date", timestamp);
+            $(whatEvent).data = ({"date": timestamp});
             console.log("" + $(whatEvent).data('date') + "");
 
             if (!$(whatEvent).data("date")) {
@@ -43,8 +43,10 @@
             }
             else { console.log("data is:" + $(whatEvent).data)}
 
-            var dataObj = $(whatEvent).data("date");
-            console.log("the time:" + typeName(dataObj));
+            var dataObj = $(whatEvent).data();
+            dataObj = dataObj[1].toString();
+            console.log("data obj:" + dataObj);
+
 
             $(whatEvent).customInfo = Date.now();
             console.log(Date.now());
