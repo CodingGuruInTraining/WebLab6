@@ -35,13 +35,13 @@
             var timestamp = Date.now();
             console.log("timestamp:" + timestamp.toString());
 
-            $(whatEvent).data = ({"date": timestamp});
+            $(whatEvent).data({"date": timestamp});
             console.log("" + $(whatEvent).data('date') + "");
 
             if (!$(whatEvent).data("date")) {
                 console.log("no data here");
             }
-            else { console.log("data is:" + $(whatEvent).data)}
+            else { console.log("data is:" + $(whatEvent).data('date'))}
 
             var dataObj = $(whatEvent).data();
             dataObj = dataObj[1].toString();
