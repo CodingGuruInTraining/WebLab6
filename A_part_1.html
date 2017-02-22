@@ -10,34 +10,40 @@
 
 <script>
     $(function() {
-
+//        Adds initial elements to the body.
         $("body").append("<input type='text' id='inputbox'>" + "<br><br>");
         $("body").append("<button id='myButton'>Press Me</button>");
         $("body").append("<button id='clearButton'>Clear</button>");
         $("body").append("<ul id='myList'></ul>");
         $("body").append("<table id='myTable'><tr><th scope='col'>Item</th><th scope='col'>Date</th></tr></table>");
 
+        // Button click event listener.
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
             console.log("textbox reads: " + input);
             $("#myList").append("<li class='not_done'>" + input + "</li>");
         });
 
+        // Clear click event listener.
         $("#clearButton").click(function(){
             $(".complete").remove();
         });
 
+        // List click event listener.
         $("#myList").click(function(event){
             var whatEvent = event.target;
             console.log("target text: " + whatEvent.innerHTML);
             $(whatEvent).toggleClass("complete");
 
-            $(whatEvent).data({"date": Date.now()});         // works
+
 
             if (!$(whatEvent).data("date")) {
+                $(whatEvent).data({"date": Date.now()});         // works
                 console.log("no data here");
             }
-            else { console.log("data is:" + $(whatEvent).data('date'))}         // works
+            else {
+
+                console.log("data is:" + $(whatEvent).data('date'))}         // works
 
         });
 
