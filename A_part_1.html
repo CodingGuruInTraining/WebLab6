@@ -26,7 +26,11 @@
 
         // Clear click event listener.
         $("#clearButton").click(function(){
-            $(".complete").remove();
+            $("#myTable").append(
+                "<tr><td></td></tr>"
+                $(".complete")
+            )
+//            $(".complete").remove();
         });
 
         // List click event listener.
