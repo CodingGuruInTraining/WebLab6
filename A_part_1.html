@@ -32,25 +32,13 @@
             console.log("target text: " + whatEvent.innerHTML);
             $(whatEvent).toggleClass("complete");
 
-            var timestamp = Date.now();
-            console.log("timestamp:" + timestamp.toString());
-
-            $(whatEvent).data({"date": timestamp});
-            console.log("" + $(whatEvent).data('date') + "");
+            $(whatEvent).data({"date": Date.now()});         // works
 
             if (!$(whatEvent).data("date")) {
                 console.log("no data here");
             }
-            else { console.log("data is:" + $(whatEvent).data('date'))}
+            else { console.log("data is:" + $(whatEvent).data('date'))}         // works
 
-            var dataObj = $(whatEvent).data();
-            dataObj = dataObj[1].toString();
-            console.log("data obj:" + dataObj);
-
-
-            $(whatEvent).customInfo = Date.now();
-            console.log(Date.now());
-//            console.log("custom info:" + $(whatEvent).customInfo.val());
         });
 
 
