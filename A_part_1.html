@@ -39,6 +39,9 @@
             }
             else { console.log("data is:" + $(whatEvent).data)}
 
+            var dataObj = $(whatEvent).data("date");
+            console.log(dataObj);
+
             $(whatEvent).customInfo = Date.now();
             console.log(Date.now());
 //            console.log("custom info:" + $(whatEvent).customInfo.val());
