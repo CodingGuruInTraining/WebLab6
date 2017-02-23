@@ -40,8 +40,8 @@
                 console.log(items[x].text);             // undefined
 
 
-                var doneDate = items[x].data('date');
-
+//                var doneDate = items[x].data('date');
+var doneDate = "test " + x;
                 $("#myTable").append(
                     "<tr><td>" + items[x].innerHTML + "</td><td>" + doneDate + "</td></tr>"
                 );
@@ -53,9 +53,6 @@
 //            for (item in items) {
 //                console.log(item + "<item  >> text " + item.innerHTML);
 //            }
-
-
-
 //            var doneDate = $(".complete").data('date');
 //
 //            $("#myTable").append(
