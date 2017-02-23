@@ -19,11 +19,11 @@
 
 
 
-var thedate = new Date();
-        console.log(Date());
-        console.log(thedate.getDate());
-        console.log(thedate.getMonth());
-        console.log(thedate.getFullYear());
+//var thedate = new Date();
+//        console.log(Date());
+//        console.log(thedate.getDate());
+//        console.log(thedate.getMonth());
+//        console.log(thedate.getFullYear());
 
 
 
@@ -52,7 +52,7 @@ var thedate = new Date();
 
 //                var doneDate = items[x].data('date');
 //var doneDate = "test " + x;
-var rawDate = $(items[x]).data('date');            // works, but needs formatting!
+var doneDate = $(items[x]).data('date');            // works, but needs formatting!
 //var doneDate = $.datepicker.formatDate('mm/dd/yyyy', rawDate);        // nope, need something else to run
 //var doneDate = $(items[x]).data('date').toDateString;
 //var doneDate = Date("mm/dd/yyyy");
@@ -88,7 +88,7 @@ var rawDate = $(items[x]).data('date');            // works, but needs formattin
 
 
             if (!$(whatEvent).data("date")) {
-                $(whatEvent).data({"date": Date.now()});         // works
+                $(whatEvent).data({"date": new Date()});         // works
                 console.log("no data here");
             }
             else {
