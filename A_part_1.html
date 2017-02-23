@@ -11,8 +11,9 @@
 <script>
     $(function() {
 // Adds initial elements to the body.
+        $("body").append("<h1>Your To-Do List</h1>");
         $("body").append("<input type='text' id='inputbox'>" + "<br><br>");
-        $("body").append("<button id='myButton'>Press Me</button>");
+        $("body").append("<button id='myButton'>Add Task</button>");
         $("body").append("<button id='clearButton'>Clear</button>");
         $("body").append("<ul id='myList'></ul>");
         $("body").append("<table id='myTable'><tr><th scope='col'>Item</th><th scope='col'>Date</th></tr></table>");
@@ -21,9 +22,13 @@
 
 // Button click event listener.
         $("#myButton").click(function(){
+            // Stores the textbox's value.
             var input = $("#inputbox").val();
+            // Checks that the textbox is not empty before continuing.
             if (input != "") {
+                // Adds new li element to the list with the textbox's value.
                 $("#myList").append("<li class='not_done'>" + input + "</li>");
+                // Clears textbox.
                 $("#inputbox").val("");
             }
         });
@@ -32,14 +37,24 @@
 
 // Clear click event listener.
         $("#clearButton").click(function(){
+            // Captures all elements with the complete class.
             var items = $(".complete");
+            // Loops through captured elements.
             for (var x = 0; x < items.length; x++) {
+                // Retrieves each element's secret data property containing
+                // the date object created upon completion.
                 var rawDate = $(items[x]).data('date');
+                // Creates a formatted date string with zero paddings for single digits.
                 var doneDate = ("0" + (rawDate.getMonth()+1)).slice(-2) + "/" + ("0" + rawDate.getDate()).slice(-2) + "/" + rawDate.getFullYear();
+                // Stores element's text value as a precaution.
                 var theText = items[x].innerHTML;
+                // Makes all captured elements fadeout slowly.
                 $(".complete").fadeOut('slow');
+                // Creates a new tr element and adds it to the table element with the
+                // text value and date string.
                 $("#myTable").append("<tr><td>" + theText + "</td><td>" + doneDate + "</td></tr>");
             }
+            // Removes all captured elements from memory and the list (if still there).
             $(".complete").remove();
         });
 
@@ -47,8 +62,12 @@
 
 // List click event listener.
         $("#myList").click(function(event){
+            // Determines which element was clicked.
             var whatEvent = event.target;
+            // Changes the clicked element's class.
             $(whatEvent).toggleClass("complete");
+            // Checks if the clicked element has a date object attached to it
+            // already and adds new one if not present.
             if (!$(whatEvent).data("date")) {
                 $(whatEvent).data({"date": new Date()});
             }

@@ -28,3 +28,8 @@ table, th, td {
     padding: 5px;
     font-family: "Lucida Bright";
 }
+
+h1 {
+    font-family: "Arial Black";
+    font-size: 42px;
+}
