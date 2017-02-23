@@ -27,7 +27,10 @@
         // Clear click event listener.
         $("#clearButton").click(function(){
 
-            var item = $(".complete").innerHTML;
+            var items = $(".complete");
+            for (item in items) {
+                console.log(item + "<item  >> text " + item.innerHTML);
+            }
             var doneDate = $(".complete").data('date');
 
             $("#myTable").append(
