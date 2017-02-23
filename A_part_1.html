@@ -29,19 +29,23 @@
 
             var items = $(".complete");
             for (var x = 0; x < items.length; x++) {
-                console.log(x);
-                console.log(items[x]);                  // <li class='not_done complete'>blah</li>
-                console.log(items[x].date);             // undefined
-                console.log(items[x].innerHTML);        // success!
-                console.log(items[x].innerText);        // success!
-                console.log(items[x].toString());       // [object HTMLLIElement]
-//                console.log(items[x].val());          // error
-                console.log(items[x].value);            // 0
-                console.log(items[x].text);             // undefined
+//                console.log(x);
+//                console.log(items[x]);                  // <li class='not_done complete'>blah</li>
+//                console.log(items[x].date);             // undefined
+//                console.log(items[x].innerHTML);        // success!
+//                console.log(items[x].innerText);        // success!
+//                console.log(items[x].toString());       // [object HTMLLIElement]
+////                console.log(items[x].val());          // error
+//                console.log(items[x].value);            // 0
+//                console.log(items[x].text);             // undefined
 
 
 //                var doneDate = items[x].data('date');
-var doneDate = "test " + x;
+//var doneDate = "test " + x;
+var rawDate = $(items[x]).data('date');            // works, but needs formatting!
+//var doneDate = $.datepicker.formatDate('mm/dd/yyyy', rawDate);        // nope, need something else to run
+//var doneDate = $(items[x]).data('date').toDateString;
+var doneDate = Date();
                 $("#myTable").append(
                     "<tr><td>" + items[x].innerHTML + "</td><td>" + doneDate + "</td></tr>"
                 );
