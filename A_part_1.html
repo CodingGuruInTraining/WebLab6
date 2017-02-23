@@ -22,8 +22,10 @@
 // Button click event listener.
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
-            $("#myList").append("<li class='not_done'>" + input + "</li>");
-            $("#inputbox").val("");
+            if (input != "") {
+                $("#myList").append("<li class='not_done'>" + input + "</li>");
+                $("#inputbox").val("");
+            }
         });
 
 
@@ -34,8 +36,10 @@
             for (var x = 0; x < items.length; x++) {
                 var rawDate = $(items[x]).data('date');
                 var doneDate = ("0" + (rawDate.getMonth()+1)).slice(-2) + "/" + ("0" + rawDate.getDate()).slice(-2) + "/" + rawDate.getFullYear();
+                items[x].fadeout();
+//                $(this).fadeOut();
                 $("#myTable").append("<tr><td>" + items[x].innerHTML + "</td><td>" + doneDate + "</td></tr>");
-                $(".complete").remove();
+//                $(".complete").fadeout(); //.remove();
             }
         });
 
