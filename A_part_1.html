@@ -45,7 +45,10 @@
 var rawDate = $(items[x]).data('date');            // works, but needs formatting!
 //var doneDate = $.datepicker.formatDate('mm/dd/yyyy', rawDate);        // nope, need something else to run
 //var doneDate = $(items[x]).data('date').toDateString;
-var doneDate = Date();
+//var doneDate = Date("mm/dd/yyyy");
+
+//var doneDate = rawDate.getDate() + "/" + rawDate.getMonth() + "/" + rawDate.getFullYear();
+
                 $("#myTable").append(
                     "<tr><td>" + items[x].innerHTML + "</td><td>" + doneDate + "</td></tr>"
                 );
