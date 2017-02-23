@@ -38,13 +38,15 @@
                 var doneDate = ("0" + (rawDate.getMonth()+1)).slice(-2) + "/" + ("0" + rawDate.getDate()).slice(-2) + "/" + rawDate.getFullYear();
 //                items[x].fadeOut();
 //                $(this).fadeOut();
+                var theText = items[x].innerHTML;
                 $(".complete").fadeOut('slow');
-                setTimeout(function() {
-                $("#myTable").append("<tr><td>" + items[x].innerHTML + "</td><td>" + doneDate + "</td></tr>");
+//                setTimeout(function() {
+                $("#myTable").append("<tr><td>" + theText + "</td><td>" + doneDate + "</td></tr>");
 //                $(".complete").fadeOut();
-                //                $(".complete").fadeout(); //.remove();
-            }, 1000)
+
+//            }, 1000)
             }
+            $(".complete").remove();
         });
 
 
