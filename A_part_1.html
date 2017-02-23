@@ -36,18 +36,13 @@
             for (var x = 0; x < items.length; x++) {
                 var rawDate = $(items[x]).data('date');
                 var doneDate = ("0" + (rawDate.getMonth()+1)).slice(-2) + "/" + ("0" + rawDate.getDate()).slice(-2) + "/" + rawDate.getFullYear();
-//                items[x].fadeOut();
-//                $(this).fadeOut();
                 var theText = items[x].innerHTML;
                 $(".complete").fadeOut('slow');
-//                setTimeout(function() {
                 $("#myTable").append("<tr><td>" + theText + "</td><td>" + doneDate + "</td></tr>");
-//                $(".complete").fadeOut();
-
-//            }, 1000)
             }
             $(".complete").remove();
         });
+
 
 
 // List click event listener.
