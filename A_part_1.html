@@ -26,10 +26,14 @@
 
         // Clear click event listener.
         $("#clearButton").click(function(){
+
+            var item = $(".complete").innerHTML;
+            var doneDate = $(".complete").data('date');
+
             $("#myTable").append(
-                "<tr><td></td></tr>"
-                $(".complete")
-            )
+                "<tr><td>" + "$('.complete').innerHTML" + "</td><td>" + "$('.complete').data('date')" + "</td></tr>"
+//                $(".complete")
+            );
 //            $(".complete").remove();
         });
 
@@ -50,10 +54,6 @@
                 console.log("data is:" + $(whatEvent).data('date'))}         // works
 
         });
-
-
-
-//        <tr><td></td></tr>
 
     })
 </script>
