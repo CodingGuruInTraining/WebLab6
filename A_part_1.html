@@ -10,7 +10,7 @@
 
 <script>
     $(function() {
-//        Adds initial elements to the body.
+// Adds initial elements to the body.
         $("body").append("<input type='text' id='inputbox'>" + "<br><br>");
         $("body").append("<button id='myButton'>Press Me</button>");
         $("body").append("<button id='clearButton'>Clear</button>");
@@ -19,17 +19,17 @@
 
 
 
-        // Button click event listener.
+// Button click event listener.
         $("#myButton").click(function(){
             var input = $("#inputbox").val();
             $("#myList").append("<li class='not_done'>" + input + "</li>");
+            $("#inputbox").val("");
         });
 
 
 
-        // Clear click event listener.
+// Clear click event listener.
         $("#clearButton").click(function(){
-
             var items = $(".complete");
             for (var x = 0; x < items.length; x++) {
                 var rawDate = $(items[x]).data('date');
@@ -40,13 +40,12 @@
         });
 
 
-        // List click event listener.
+// List click event listener.
         $("#myList").click(function(event){
             var whatEvent = event.target;
             $(whatEvent).toggleClass("complete");
             if (!$(whatEvent).data("date")) {
                 $(whatEvent).data({"date": new Date()});
-                console.log("no data here");
             }
         });
     })
